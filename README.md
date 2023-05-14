@@ -3,6 +3,7 @@
 The program uses first-order (predicate) logic to solve the famous Pyramid Solitaire card game. Predicates are given as follows:
 
 ### Predicates:
+```
 (:predicates
     (sum-equal-13 ?top - rank ?bottom - rank) - used to immitate the sum of two ranks
     (at ?c - card ?loc - location) - used to locate the object. Available locations: pyramid, deck, waste
@@ -16,9 +17,9 @@ The program uses first-order (predicate) logic to solve the famous Pyramid Solit
     (last_recycle) - used to indicate the second (last) cycle click
     (done) - used to indicate that no cycles are available
 )
-
+```
 ### Actions:
-
+```
 remove-king:
     removes a king at location loc
     king must be open
@@ -39,9 +40,9 @@ shuffle:
     cycles waste back to deck
     no cards must be left in the deck
     some cards must be present in the waste
-
+```
 ### Initial state:
-
+```
 cards from deck are marked (at deck);
 each card is marked as closed by the predecessor (closed-by);
 
@@ -53,10 +54,10 @@ each card is marked under the two cards in front of it (closed-by);
 ranks are mapped to cards available in the current problem (mapping);
 
 king cards are marked (king);
-
+```
 ### Goal state:
-
+```
 card at the top of the pyramid is (closed);
-
+```
 ## To run:
 Use fast-downward package. Download [here](https://www.fast-downward.org/QuickStart).
